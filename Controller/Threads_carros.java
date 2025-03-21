@@ -8,9 +8,9 @@ public class Threads_carros extends Thread{
 	private int carro;
 	private Semaphore s;
 	
-	public Threads_carros(String sentido, int carro, Semaphore semaforo) {
+	public Threads_carros(String sentido, Semaphore semaforo) {
 	this.sentido = sentido;	
-	this.carro = carro;
+	this.carro = (int) threadId();
 	s = semaforo;
 	}
 	

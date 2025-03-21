@@ -10,10 +10,10 @@ public class Principal_cruzamento {
 		
 		Semaphore semaforo = new Semaphore(1);
 		
-		Thread t = new Threads_carros("norte", 1, semaforo);
-		Thread t2 = new Threads_carros("sul", 2, semaforo);
-		Thread t3 = new Threads_carros("leste", 3, semaforo);
-		Thread t4 = new Threads_carros("oeste", 4, semaforo);
+		Thread t = new Threads_carros("norte", semaforo);
+		Thread t2 = new Threads_carros("sul", semaforo);
+		Thread t3 = new Threads_carros("leste", semaforo);
+		Thread t4 = new Threads_carros("oeste", semaforo);
 		
 		t.start();
 		t2.start();
